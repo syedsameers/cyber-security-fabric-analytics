@@ -5,7 +5,8 @@ Cyber Security Analytics | Microsoft Fabric &amp; Power BI  An end-to-end hybrid
 
 ## 🏗️ Architecture Overview
 
-```text
+![Fabric End-to-End Lineage Architecture](fabric_architecture_lineage.png)
+
 [MS SQL Server (On-Premises)]
              │
              ▼
@@ -23,8 +24,10 @@ Cyber Security Analytics | Microsoft Fabric &amp; Power BI  An end-to-end hybrid
              ▼
 [Power BI Executive Dashboard]
 
-📊 Semantic Model & Data Modeling
-The semantic model is architected as an enterprise Star Schema:
+
+## 📊 Semantic Model & Data Modeling
+
+![Direct Lake Star Schema Model](semantic_model_star_schema.png)
 
 Dimensions (6): dim_date, dim_attack_source, dim_attack_type, dim_department, dim_security_domain, dim_severity
 
@@ -32,7 +35,10 @@ Facts (4): fact_incidents, fact_firewall_uptime, fact_patch_compliance, fact_sec
 
 Storage Mode: Direct Lake / Lakehouse Endpoint
 
-📈 Key Dashboard Metrics
+## 📈 Key Dashboard Metrics
+
+![Cyber Security Operations Executive Dashboard](dashboard_overview.png)
+
 Total Incident Volume & YoY Trend: Real-time tracking of security incidents versus prior year baselines.
 
 Mean Time to Response (MTTR): Average response time tracking across quarters and departments.
